@@ -22,11 +22,11 @@ screen_height = 600
 gameWindow = pygame.display.set_mode((screen_width, screen_height))
 
 
-bgimg = pygame.image.load(".1.jpg")
+bgimg = pygame.image.load("/home/ansh/Desktop/snake/.1.jpg")
 bgimg = pygame.transform.scale(bgimg, (screen_width, screen_height)).convert_alpha()
-bgimg2= pygame.image.load(".2.jpg")
+bgimg2= pygame.image.load("/home/ansh/Desktop/snake/.1.jpg")
 bgimg2=pygame.transform.scale(bgimg2 , (screen_width,screen_height)).convert_alpha()
-bgimg3= pygame.image.load(".3.jpg")
+bgimg3= pygame.image.load("/home/ansh/Desktop/snake/.1.jpg")
 bgimg3=pygame.transform.scale(bgimg3 , (screen_width,screen_height)).convert_alpha()
 
 
@@ -73,7 +73,7 @@ def welcome():
         clock.tick(60) 
 
 def gameloop():
-    pygame.mixer.music.load('back.mp3')
+    pygame.mixer.music.load('/home/ansh/Desktop/snake/Beep Short .mp3')
     pygame.mixer.music.play(loops=100)
 
     # Game specific variables
@@ -169,12 +169,12 @@ def gameloop():
 
             if head in snk_list[:-1]:
                 game_over = True
-                pygame.mixer.music.load('game over.mp3')
+                pygame.mixer.music.load('/home/ansh/Desktop/snake/game over.mp3')
                 pygame.mixer.music.play()
 
             if snake_x<0 or snake_x>screen_width or snake_y<0 or snake_y>screen_height:
                 game_over = True
-                pygame.mixer.music.load('game over.mp3')
+                pygame.mixer.music.load('/home/ansh/Desktop/snake/game over.mp3')
                 pygame.mixer.music.play()
             plot_snake(gameWindow, black, snk_list, snake_size)
         pygame.display.update()
